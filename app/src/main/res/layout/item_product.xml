@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:strokeColor="#EEEEEE"
+    app:strokeWidth="1dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:contentDescription="Product Image"
+            android:background="@drawable/bg_rounded_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Golden Apple"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/productImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Product Price -->
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="₹500000"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/productName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Add to Cart Button Container -->
+        <FrameLayout
+            android:id="@+id/addToCartContainer"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/productPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddToCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Add to Cart"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:icon="@drawable/add_shopping_cart"
+                app:iconPadding="8dp"
+                android:iconTint="@android:color/white"
+                app:cornerRadius="12dp"
+                app:backgroundTint="@color/colorPrimary" />
+
+            <ProgressBar
+                android:id="@+id/addToCartProgress"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- Quantity Counter -->
+        <LinearLayout
+            android:id="@+id/quantityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_quantity_box"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/productPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnDecrement"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Decrease"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+
+            <ImageButton
+                android:id="@+id/btnIncrement"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Increase"
+                app:tint="@color/colorPrimary" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

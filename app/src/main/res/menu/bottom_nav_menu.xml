@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/home"
+        app:labelVisibilityMode="unlabeled" />
+    <item
+        android:id="@+id/nav_search"
+        android:title="Search"
+        android:icon="@drawable/search"
+        app:labelVisibilityMode="unlabeled"/>
+    <item
+        android:id="@+id/nav_cart"
+        android:title="Cart"
+        android:icon="@drawable/cart"
+        app:labelVisibilityMode="unlabeled"/>
+    <item
+        android:id="@+id/nav_order"
+        android:title="Order"
+        android:icon="@drawable/order"
+        app:labelVisibilityMode="unlabeled"/>
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/profile"
+        app:labelVisibilityMode="unlabeled"/>
+</menu>

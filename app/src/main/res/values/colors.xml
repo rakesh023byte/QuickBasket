@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Theme Colors -->
+    <color name="colorPrimary">#00796B</color>           <!-- Deep Teal -->
+    <color name="colorPrimaryDark">#004D40</color>       <!-- Dark Teal -->
+    <color name="colorAccent">#FF7043</color>            <!-- Warm Orange -->
+    <color name="colorBackground">#FAFAFA</color>        <!-- Soft White -->
+    <color name="white">#FFFFFF</color>        <!-- Soft White -->
+    <color name="green">#90EE90</color>        <!-- Green -->
+    <color name="colorTextPrimary">#212121</color>       <!-- Dark Gray -->
+
+    <!-- Additional Colors -->
+    <color name="Gray">#B0BEC5</color>              <!-- Light Gray -->
+    <color name="colorGray">#9E9E9E</color>
+    <color name="color">#C8E6C9</color>
+    <color name="colors">#212121</color>
+
+</resources>

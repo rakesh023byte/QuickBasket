@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flexbox="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="8dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Flexbox for Order ID and Date -->
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            flexbox:flexDirection="row"
+            flexbox:justifyContent="space_between"
+            flexbox:alignItems="center">
+
+            <TextView
+                android:id="@+id/tvOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order ID: #123456"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/tvOrderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 June 2025"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:fontFamily="sans-serif" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <!-- Order Status -->
+        <TextView
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: Pending"
+            android:textSize="14sp"
+            android:textColor="#FB8C00"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Total Amount -->
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: ₹1499.00"
+            android:textSize="15sp"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="#E0E0E0" />
+
+        <!-- Item Summary -->
+        <TextView
+            android:id="@+id/tvOrderItemsSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2 items: Shoes, T-shirt"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

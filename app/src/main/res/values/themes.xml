@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorBackground</item>
+
+        <!-- Secondary/accent colors -->
+        <item name="colorOnSecondary">@color/colorBackground</item>
+
+        <!-- Background and surface -->
+        <item name="colorOnBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorBackground</item>
+
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextPrimary</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+
+    </style>
+
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+</resources>

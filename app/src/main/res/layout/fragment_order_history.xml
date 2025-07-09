@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/orderHistoryLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color"
+    android:padding="16dp"
+    tools:context=".fragments.OrderHistoryFragment">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvOrderHistoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order History"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:letterSpacing="0.05"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="16dp" />
+
+    <!-- RecyclerView with subtle card shadow effect -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewOrders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp"
+        android:scrollbars="vertical"
+        android:overScrollMode="ifContentScrolls" />
+
+    <!-- No Orders Message -->
+    <TextView
+        android:id="@+id/tvNoOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No orders placed yet."
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textColor="#9E9E9E"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="24dp"
+        android:padding="8dp" />
+
+</LinearLayout>
